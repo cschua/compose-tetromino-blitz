@@ -6,7 +6,7 @@ import ScoreBoard from '../components/ScoreBoard';
 import Controls from '../components/Controls';
 import { useGameState } from '../game/useGameState';
 import { useIsMobile } from '@/hooks/use-mobile';
-import { toast } from '@/hooks/use-toast';
+import { toast } from '@/components/ui/use-toast';
 
 const Index = () => {
   const { gameState, dispatch } = useGameState();
