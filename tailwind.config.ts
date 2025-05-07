@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,16 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Tetromino colors
+				tetromino: {
+					'i': '#00f0f0', // Cyan for I piece
+					'j': '#0000f0', // Blue for J piece
+					'l': '#f0a000', // Orange for L piece
+					'o': '#f0f000', // Yellow for O piece
+					's': '#00f000', // Green for S piece
+					't': '#a000f0', // Purple for T piece
+					'z': '#f00000', // Red for Z piece
 				}
 			},
 			borderRadius: {
@@ -84,11 +95,31 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'line-clear': {
+					'0%': { 
+						opacity: '1',
+						transform: 'scale(1)'
+					},
+					'50%': { 
+						opacity: '0.5',
+						transform: 'scale(1.05)'
+					},
+					'100%': { 
+						opacity: '0',
+						transform: 'scale(1)'
+					}
+				},
+				'game-over-flash': {
+					'0%, 100%': { opacity: '0.8' },
+					'50%': { opacity: '1' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'line-clear': 'line-clear 0.3s ease-in-out',
+				'game-over-flash': 'game-over-flash 2s ease-in-out infinite'
 			}
 		}
 	},
