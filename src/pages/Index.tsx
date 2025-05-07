@@ -10,7 +10,7 @@ import { toast } from '@/components/ui/use-toast';
 
 const Index = () => {
   const { gameState, dispatch } = useGameState();
-  const { board, score, level, linesCleared, nextPiece, gameOver, paused } = gameState;
+  const { board, score, level, linesCleared, nextPiece, currentPiece, gameOver, paused } = gameState;
   const isMobile = useIsMobile();
 
   // Show game over toast
@@ -44,7 +44,7 @@ const Index = () => {
         <div className={`flex ${isMobile ? 'flex-col' : 'flex-row'} items-center justify-center gap-6`}>
           {/* Game Board */}
           <div className="relative">
-            <GameBoard board={board} />
+            <GameBoard board={board} currentPiece={currentPiece} />
             
             {/* Pause Overlay */}
             {paused && !gameOver && (
