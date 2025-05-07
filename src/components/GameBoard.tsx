@@ -11,7 +11,7 @@ const Cell: React.FC<{ type: CellType }> = ({ type }) => {
     ? `bg-tetromino-${type.toLowerCase()} border border-gray-800`
     : 'bg-gray-900 border border-gray-800';
 
-  return <div className={`w-6 h-6 ${cellClass}`} />;
+  return <div className={`w-7 h-7 ${cellClass}`} />;
 };
 
 const GameBoard: React.FC<GameBoardProps> = ({ board }) => {

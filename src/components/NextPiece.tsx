@@ -20,7 +20,7 @@ const NextPiece: React.FC<NextPieceProps> = ({ piece }) => {
             row.map((cell, colIndex) => (
               <div
                 key={`${rowIndex}-${colIndex}`}
-                className={`w-4 h-4 ${
+                className={`w-5 h-5 ${
                   cell
                     ? `bg-tetromino-${type.toLowerCase()}`
                     : 'bg-transparent'
